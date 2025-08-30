@@ -13,18 +13,18 @@ int main(){
             break;
         }
 
-        while (A > 5 || A < 1){
+        while (A > 5 || A < 1 || A == 0){
             printf("Opcao invalida. Selecione uma opcao valida.\n");
             printf("Selecione uma operacao:\n1. Adicao\n2. Subtracao\n3. Multiplicacao\n4. Divisao\n5. Sair\nOpcao: ");
             scanf("%d", &A);
         }
 
         printf("Digite o primeiro numero: ");
-        int B;
+        float B;
         scanf("%d", &B);
 
         printf("Digite o segundo numero: ");
-        int C;
+        float C;
         scanf("%d", &C);
 
         if (A == 1){
@@ -45,6 +45,11 @@ int main(){
         
         printf("Deseja realizar outra operacao? (s/n): ");
         scanf(" %c", &simounao);
+
+        while (simounao != 's' || simounao != 'n'){
+            printf("Resposta invalida. Por favor, digite 's' para sim ou 'n' para nao.\nDeseja realizar outra operacao? (s/n): ");
+            scanf(" %c", &simounao);
+        }
         if (simounao == 'n'){
             break;
         }
@@ -53,3 +58,4 @@ int main(){
     printf("Obrigado por usar a calculadora! Ate a proxima.");
 
 }
+
