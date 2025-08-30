@@ -13,6 +13,12 @@ int main(){
             break;
         }
 
+        while (A > 5 || A < 1){
+            printf("Opcao invalida. Selecione uma opcao valida.\n");
+            printf("Selecione uma operacao:\n1. Adicao\n2. Subtracao\n3. Multiplicacao\n4. Divisao\n5. Sair\nOpcao: ");
+            scanf("%d", &A);
+        }
+
         printf("Digite o primeiro numero: ");
         int B;
         scanf("%d", &B);
@@ -45,4 +51,5 @@ int main(){
     }
 
     printf("Obrigado por usar a calculadora! Ate a proxima.");
+
 }
